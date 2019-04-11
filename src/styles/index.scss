@@ -1,0 +1,776 @@
+@import "./mixin.scss";
+@import "./vux-ui.scss";
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 23.4375px;
+  }
+}
+
+@media only screen and (min-width: 384px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 25.875px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+/*@media only screen and (min-width: 533px){*/
+/*html { font-size: 33.3125px; }*/
+/*}*/
+
+/*@media only screen and (min-width: 568px){*/
+/*html { font-size: 35.5px; }*/
+/*}*/
+
+/*@media only screen and (min-width: 600px){*/
+/*html { font-size: 37.5px; }*/
+/*}*/
+/*@media only screen and (min-width: 640px){*/
+/*html { font-size: 40px; }*/
+/*}*/
+/*@media only screen and (min-width: 750px){*/
+/*html { font-size: 46.875px; }*/
+/*}*/
+
+/*样式重置*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.42857143;
+  color: #333;
+  background: #f0f0f0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+ul::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  border: none;
+}
+input,
+select,
+button,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+em,
+i {
+  font-style: normal;
+}
+
+/*public*/
+.mgAT {
+  float: none;
+  margin: 0 auto;
+}
+
+.flL {
+  float: left;
+}
+.flR {
+  float: right;
+}
+.flN {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.psR {
+  position: relative;
+}
+.psA {
+  position: absolute;
+}
+.psF {
+  position: fixed;
+}
+
+.dpB {
+  display: block;
+}
+.dpI {
+  display: inline;
+}
+.dpIB {
+  display: inline-block;
+}
+
+.zid1 {
+  z-index: 100;
+}
+.zid2 {
+  z-index: 200;
+}
+.zid3 {
+  z-index: 300;
+}
+.zid4 {
+  z-index: 400;
+}
+.zid5 {
+  z-index: 500;
+}
+.zid6 {
+  z-index: 600;
+}
+.zid7 {
+  z-index: 700;
+}
+
+.ft400 {
+  font-weight: 400;
+}
+.ft700 {
+  font-weight: 700;
+}
+
+.wp100 {
+  width: 100%;
+}
+.hp100 {
+  height: 100%;
+}
+
+.wp5 {
+  width: 5%;
+}
+.wp10 {
+  width: 10%;
+}
+.wp15 {
+  width: 15%;
+}
+.wp20 {
+  width: 20%;
+}
+.wp25 {
+  width: 25%;
+}
+.wp30 {
+  width: 30%;
+}
+.wp35 {
+  width: 35%;
+}
+.wp40 {
+  width: 40%;
+}
+.wp45 {
+  width: 45%;
+}
+.wp50 {
+  width: 50%;
+}
+.wp55 {
+  width: 55%;
+}
+.wp60 {
+  width: 60%;
+}
+.wp65 {
+  width: 65%;
+}
+.wp70 {
+  width: 70%;
+}
+.wp75 {
+  width: 75%;
+}
+.wp80 {
+  width: 80%;
+}
+.wp85 {
+  width: 85%;
+}
+.wp90 {
+  width: 90%;
+}
+.wp95 {
+  width: 95%;
+}
+
+.vtAT {
+  vertical-align: top;
+}
+.vtAM {
+  vertical-align: middle;
+}
+.vtAB {
+  vertical-align: bottom;
+}
+.textL {
+  text-align: left;
+}
+.textC {
+  text-align: center;
+}
+.textR {
+  text-align: right;
+}
+
+.cl333 {
+  color: #333;
+}
+.cl666 {
+  color: #666;
+}
+.cl999 {
+  color: #999;
+}
+
+/*字体省略号*/
+.txtElps {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rdP50 {
+  border-radius: 50%;
+}
+
+.csP {
+  cursor: pointer;
+}
+.csD {
+  cursor: default;
+}
+
+/*透明度*/
+.opt0 {
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.opt1 {
+  filter: alpha(opacity=10);
+  -moz-opacity: 0.1;
+  -khtml-opacity: 0.1;
+  opacity: 0.1;
+}
+.opt2 {
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+}
+.opt3 {
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+}
+.opt4 {
+  filter: alpha(opacity=40);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  opacity: 0.4;
+}
+.opt5 {
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.opt6 {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+}
+.opt7 {
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}
+.opt8 {
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+}
+.opt9 {
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.t0 {
+  top: 0;
+}
+.r0 {
+  right: 0;
+}
+.b0 {
+  bottom: 0;
+}
+.l0 {
+  left: 0;
+}
+.mg0 {
+  margin: 0;
+}
+.mgLR0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mgTB0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mgT0 {
+  margin-top: 0;
+}
+.mgR0 {
+  margin-right: 0;
+}
+.mgB0 {
+  margin-bottom: 0;
+}
+.mgL0 {
+  margin-left: 0;
+}
+.mgL5 {
+  margin-left: 5px;
+}
+.mgL10 {
+  margin-left: 10px;
+}
+.mgL15 {
+  margin-left: 15px;
+}
+.pd0 {
+  padding: 0;
+}
+.pdLR0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pdTB0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.pdT0 {
+  padding-top: 0;
+}
+.pdT10 {
+  padding-top: pxRem(10px);
+}
+.pdR0 {
+  padding-right: 0;
+}
+.pdB0 {
+  padding-bottom: 0;
+}
+.pdL0 {
+  padding-left: 0;
+}
+.mgT10 {
+  margin-top: pxRem(10px);
+}
+.mgT15 {
+  margin-top: pxRem(15px);
+}
+.mgT20 {
+  margin-top: pxRem(20px);
+}
+.mgT30 {
+  margin-top: pxRem(30px);
+}
+.mgL20 {
+  margin-left: pxRem(38px);
+}
+.mgT40 {
+  margin-top: pxRem(40px);
+}
+.mgT50 {
+  margin-top: pxRem(50px);
+}
+.ftS26 {
+  font-size: pxRem(26px);
+}
+.ftS28 {
+  font-size: pxRem(28px);
+}
+.lh36 {
+  line-height: pxRem(36px);
+}
+/* 公共样式end */
+
+#wrapper {
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: #fff;
+}
+.yellow-btn {
+  width: 100%;
+  @include set-btn(100%, 90px, 88px, #fed652, #fed652, #37352e, 45px, 34px);
+  @include box-shadow(2px, 2px, 10px, #fcd752);
+}
+// 登录
+.login-page {
+  height: 100%;
+  min-height: pxRem(1170px);
+  background: #fff;
+}
+.login-head {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.footer-logo {
+  height: calc(100% - 21.12rem);
+  position: relative;
+  width: 100%;
+  div {
+    position: absolute;
+    bottom: pxRem(40px);
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.logo {
+  @include set-icon(100px, 42px, "/static/images/logo.png");
+}
+.logo-text {
+  font-size: pxRem(24px);
+  color: rgba(55, 53, 46, 0.6);
+}
+.login-main {
+  padding: pxRem(40px) pxRem(60px) 0;
+  .weui-cell {
+    border: 1px solid #c2c2c2;
+    height: pxRem(90px);
+    line-height: pxRem(90px);
+    font-size: pxRem(30px);
+    border-radius: pxRem(45px);
+    padding-left: pxRem(100px);
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(137, 137, 137, 0.5);
+  }
+  :-moz-placeholder {
+    color: rgba(137, 137, 137, 0.5);
+  }
+  ::-moz-placeholder {
+    color: rgba(137, 137, 137, 0.5);
+  }
+  :-ms-input-placeholder {
+    color: rgba(137, 137, 137, 0.5);
+  }
+}
+.email-input::before {
+  content: "";
+  position: absolute;
+  top: pxRem(29px);
+  left: pxRem(37px);
+  @include set-icon(33px, 27px, "/static/images/email-icon.png");
+}
+.password-input::before {
+  content: "";
+  position: absolute;
+  top: pxRem(29px);
+  left: pxRem(32px);
+  @include set-icon(33px, 37px, "/static/images/lock-icon.png");
+}
+// 首页
+.home-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 480px;
+  transform: translate(-50%, 0);
+  img {
+    width: 100%;
+  }
+}
+.home-main {
+  position: relative;
+  z-index: 10;
+  .tour-route {
+    @include box-shadow(2px, 2px, 15px, rgba(252, 215, 82, 0.6));
+  }
+  .my-tour-route {
+    @include box-shadow(2px, 2px, 15px, rgba(254, 137, 89, 0.6));
+  }
+  padding: pxRem(40px) pxRem(40px) 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+// 列表
+.list-page {
+  background: #f4f4f4;
+  height: 100%;
+}
+.default-text {
+  color: #37352e;
+}
+.gray-text {
+  color: #898989;
+}
+.tour-list {
+  padding: pxRem(30px) 0 pxRem(40px);
+  background: #fff;
+  header {
+    padding: 0 pxRem(22px);
+    width: pxRem(706px);
+    height: pxRem(145px);
+    margin: 0 auto;
+  }
+  .tour-list-main {
+    padding: 0 pxRem(40px);
+  }
+  .better-title {
+    background: url("/static/images/better-title.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .bigger-title {
+    background: url("/static/images/bigger-title.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.list-box {
+  height: calc(100% - 44px - 0.32rem);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.hint-title {
+  position: relative;
+  font-size: pxRem(28px);
+  color: #37352e;
+  padding-left: pxRem(50px);
+  word-break: break-all;
+  .bulb-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: pxRem(38px);
+  }
+}
+.lh50 {
+  line-height: pxRem(50px);
+}
+.bulb-icon {
+  @include set-icon(38px, 38px, "/static/images/bulb-icon.png");
+}
+.applied-btn {
+  @include set-btn(140px, 44px, 42px, #fed652, #fed652, #37352e, 22px, 28px);
+}
+.applied-btn.h38 {
+  @include set-btn(100px, 38px, 36px, #fed652, #fed652, #37352e, 19px, 24px);
+}
+.yellow-btn.h90 {
+  @include set-btn(240px, 90px, 88px, #fed652, #fed652, #37352e, 45px, 34px);
+}
+.tour-item {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: pxRem(10px);
+  margin-top: pxRem(30px);
+  @include box-shadow(1px, 3px, 15px, #e8e8e8);
+  img {
+    display: block;
+    width: 100%;
+  }
+  .message {
+    padding: pxRem(30px);
+    font-size: pxRem(32px);
+  }
+  .applied-btn {
+    position: absolute;
+    top: pxRem(20px);
+    right: pxRem(20px);
+  }
+}
+.tour-item.mgT0 {
+  margin-top: 0;
+}
+.detial-title {
+  font-size: pxRem(30px);
+  line-height: pxRem(30px);
+  padding-top: pxRem(40px);
+  i {
+    display: inline-block;
+    width: pxRem(7px);
+    height: pxRem(30px);
+    background: #fed652;
+    border-radius: pxRem(3px);
+    vertical-align: middle;
+    margin-right: pxRem(20px);
+  }
+}
+.detial-pdf-box {
+  background: #fff;
+  padding-bottom: pxRem(130px);
+  .detial-title {
+    padding: 0 pxRem(40px);
+  }
+}
+.detial-footer {
+  position: fixed;
+  width: 100%;
+  max-width: 480px;
+  height: pxRem(130px);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  padding: pxRem(20px) pxRem(40px);
+  @include box-shadow(1px, 3px, 15px, #b1b1b1);
+  line-height: pxRem(90px);
+}
+.time-down {
+  font-size: pxRem(28px);
+  font-weight: 700;
+  color: #ffbf02;
+  vertical-align: middle;
+}
+// 选择弹框
+.close-icon{
+    @include set-icon(60px,60px,'/static/images/close-icon.png')
+}
+.select-dialog {
+    .close-box{
+        position: absolute;
+        right: 0;
+        top: pxRem(-90px)
+    }
+  header {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .select-list {
+    padding: pxRem(40px) pxRem(80px);
+    max-height: pxRem(650px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    li {
+      padding: pxRem(35px) 0;
+      border-bottom: 1px solid #d5d5d5;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+  footer {
+    line-height: pxRem(90px);
+    padding: pxRem(20px) pxRem(40px);
+    @include box-shadow(1px, 3px, 15px, #b1b1b1);
+    .yellow-btn {
+      width: pxRem(230px);
+    }
+  }
+  .message {
+    width: calc(100% - 1.1rem);
+  }
+  .select-state {
+    width: pxRem(50px);
+  }
+  .weui-dialog{
+      overflow: auto;
+  }
+}
+.gray-select {
+  @include set-icon(50px, 50px, "/static/images/gray-select.png");
+}
+.gray-select.checked {
+  @include set-icon(50px, 50px, "/static/images/yellow-select.png");
+}

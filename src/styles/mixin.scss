@@ -1,0 +1,45 @@
+/* 设计稿px转换rem函数 */
+@function pxRem($px) {
+    @return ($px / 46.875px) + rem;
+}
+@mixin border-radius ($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin linear-gradient($angle,$top,$bottom) {
+    background: -webkit-linear-gradient($angle,$top, $bottom);
+    background: -o-linear-gradient($angle,$top, $bottom);
+    background: -moz-linear-gradient($angle,$top, $bottom);
+    background: linear-gradient($angle,$top, $bottom);
+} 
+/* 投影 */
+@mixin box-shadow ($left,$top,$blurry,$color) {
+    -moz-box-shadow: $left $top $blurry $color;
+    -webkit-box-shadow: $left $top $blurry $color;
+    box-shadow: $left $top $blurry $color;
+}
+// 图标
+@mixin set-icon ($width,$height,$url) {
+    display: inline-block;
+    width: pxRem($width);
+    height: pxRem($height);
+    background: url($url) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle
+}
+// 按钮
+@mixin set-btn($width,$height,$lh,$borderColor,$bgCOlor,$color,$radius,$ftS) {
+    display: inline-block;
+    width: pxRem($width);
+    height: pxRem($height);
+    line-height: pxRem($lh);
+    background: $bgCOlor;
+    color: $color;
+    font-size: pxRem($ftS);
+    border: 1px solid $borderColor;
+    -webkit-border-radius: pxRem($radius);
+    -moz-border-radius: pxRem($radius);
+    border-radius: pxRem($radius);
+    text-align: center;
+} 

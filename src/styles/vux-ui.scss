@@ -1,0 +1,49 @@
+.set-vux{
+    .vux-tab .vux-tab-item {
+        font-size: pxRem(34px);
+        background: #fff;
+        color: #898989;
+    }
+    .vux-tab .vux-tab-item.vux-tab-selected{
+        color: #37352e;
+        font-weight: 700;
+    }
+    .vux-tab-bar-inner{
+        background: #fed652;
+    }
+    .vux-x-icon.vux-x-icon-ios-arrow-right{
+        fill: #9b9a96;
+    }
+    .weui-dialog{
+        width: 93%;
+        max-width: 95%;
+        background: none; 
+    }
+    .weui-cells:before,.weui-cells:after{
+        border: none
+    }
+    .weui-cell{
+        border: 1px solid #ececec;
+        border-radius: pxRem(40px);
+    }
+    .weui-label{
+        color: #adadad
+    }
+    .weui-label::before{
+        content: '*';
+        color:#ff7777
+    }
+    .weui-icon-clear{
+        display: none
+    }
+} 
+.weui-dialog{
+    width: 90% !important;
+    max-width: 480px !important;
+}
+
+
+
+
+
+
